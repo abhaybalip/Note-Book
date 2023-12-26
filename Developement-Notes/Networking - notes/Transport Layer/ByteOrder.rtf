@@ -1,0 +1,27 @@
+*Addressing scheme =>
+
+Little Endian − 
+In this scheme, low-order byte is stored on the starting address (A)
+and high-order byte is stored on the next address (A + 1).
+
+Big Endian −
+In this scheme, high-order byte is stored on the starting address (A)
+and low-order byte is stored on the next address (A + 1).
+
+
+To allow machines with different byte order conventions communicate
+with each other, the Internet protocols specify a
+canonical byte order convention for data transmitted over the network.
+This is known as Network Byte Order.
+
+
+
+Byte Ordering Functions
+Routines for converting data between a host's internal representation
+and Network Byte Order are as follows −
+
+Function	Description
+htons()	    Host to Network Short
+htonl()	    Host to Network Long
+ntohl()	    Network to Host Long
+ntohs()	    Network to Host Short
