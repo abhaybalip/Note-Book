@@ -1,0 +1,19 @@
+
+
+Unix provides various function calls to help you manipulate
+IP addresses. These functions convert Internet addresses between
+ASCII strings (what humans prefer to use) and network byte ordered
+binary values (values that are stored in socket address structures).
+
+
+int inet_aton(const char *strptr, struct in_addr *addrptr)
+    converts the specified string in the Internet standard dot notation
+    to a network address,and stores the address in the structure provided.
+
+in_addr_t inet_addr(const char *strptr)
+    converts the specified string in the Internet standard dot notation
+    to an integer value suitable for use as an Internet address.
+
+char *inet_ntoa(struct in_addr inaddr)
+    converts the specified Internet host address to a
+    string in the Internet standard dot notation.
