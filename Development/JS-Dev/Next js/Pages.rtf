@@ -1,0 +1,17 @@
+Next.js employs a file-system-based routing system, making it incredibly straightforward to manage navigation within your application.
+
+Key Points:
+Pages Directory: All pages reside within the pages directory of your project.
+
+File-Based Routing: The file name directly correlates to the URL path.
+pages/index.js maps to the root path (/).
+pages/about.js maps to /about.
+
+Dynamic Routes: Use square brackets for dynamic segments in file names.
+pages/posts/[id].js allows for dynamic URLs like /posts/1, /posts/my-post.
+
+Nested Routes: Create nested directories within pages for hierarchical routes.
+pages/blog/index.js maps to /blog.
+pages/blog/post/[id].js maps to /blog/post/:id.
+
+Link Component: Use the Link component from next/link for internal navigation.
