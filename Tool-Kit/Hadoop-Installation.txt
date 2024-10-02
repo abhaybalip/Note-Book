@@ -1,0 +1,77 @@
+by @abhaybalip
+
+Hadoop Installation ->
+
+1.Install Hadoop , java 8SE , MS VisualRedist latest
+
+hadoop -> https://hadoop.apache.org/releases.html
+java -> https://www.oracle.com/in/java/technologies/javase/javase8-archive-downloads.html
+MS VisualRedist -> https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170
+
+2.replace bin folder with native bin -> https://drive.google.com/file/d/1nCN_jK7EJF2DmPUUxgOggnvJ6k6tksYz/vi
+
+3.set hadoop and java env-variable in system
+
+4.edit hadoop-env file for java_home path
+
+5.create data/ namenode & datanode
+
+6.install dll file in windows/system32 -> https://www.sts-tutorial.com/download/msvcr120
+
+7.edit xml configuration files
+
+
+XML Config =>
+
+1. core-site
+
+<configuration>
+<property>
+<name>fs.defaultFS</name>
+<value>hdfs://localhost:9000</value>
+</property>
+</configuration>
+
+
+2. mapred-site
+
+<configuration>
+<property>
+<name>mapreduce.framework.name</name>
+<value>yarn</value>
+</property>
+</configuration>
+
+3. hdfs-site
+
+<configuration>
+<property>
+<name>dfs.replication</name>
+<value>1</value>
+</property>
+<property>
+<name>dfs.namenode.name.dir</name>
+<value>C:\hadoop\data\namenode</value>
+</property>
+<property>
+<name>dfs.datanode.data.dir</name>
+
+<value>C:\hadoop\data\datanode</value>
+</property>
+</configuration>
+
+
+4. yarn-site
+
+<configuration>
+<property>
+<name>yarn.nodemanager.aux-services</name>
+<value>mapreduce_shuffle</value>
+</property>
+<property>
+<name>yarn.nodemanager.auxservices.mapreduce.shuffle
+.class</name>
+<value>org.apache.hadoop.mapred.ShuffleHandler</value>
+</property>
+</configuration>
+
