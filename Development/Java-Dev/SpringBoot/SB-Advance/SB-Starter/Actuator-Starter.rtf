@@ -1,0 +1,40 @@
+Spring Boot Actuator is a sub-module of the Spring Boot framework that provides essential tools for monitoring and managing Spring Boot applications.
+It offers a variety of built-in endpoints that allow developers and operations teams to gain insights into application health, metrics, and other operational data.
+
+## Key Components
+
+- **Endpoints**: Actuator exposes several endpoints that can be accessed via HTTP or JMX. Commonly used endpoints include:
+  - **/actuator/health**: Provides the application's health status.
+  - **/actuator/info**: Displays arbitrary application information such as version, description, and author.
+  - **/actuator/mappings**: Lists all the request mappings in the application.
+
+- **Configuration**: By default, only the health and info endpoints are exposed without security. Other endpoints require configuration to ensure secure access, typically using Spring Security.
+
+- **Integration**: To integrate Actuator into a Spring Boot application, you need to add the following dependency in your `pom.xml`:
+
+  ```xml
+  <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-actuator</artifactId>
+  </dependency>
+  ```
+
+## Usage
+
+Once integrated, these endpoints can be accessed at URLs prefixed with `/actuator`. For example:
+- Accessing health information: `http://localhost:8080/actuator/health`
+- Retrieving application info: `http://localhost:8080/actuator/info`
+
+Spring Boot Actuator significantly simplifies the process of monitoring and managing applications, making it a crucial component for production-grade web applications built with Spring [1][2][4].
+
+Citations:
+[1] https://www.unlogged.io/post/springboot-actuator
+[2] https://www.javatpoint.com/spring-boot-actuator
+[3] https://docs.spring.io/spring-boot/docs/2.1.7.RELEASE/reference/html/production-ready-endpoints.html
+[4] https://www.digitalocean.com/community/tutorials/spring-boot-actuator-endpoints
+[5] https://spring.io/guides/gs/actuator-service/
+[6] https://www.baeldung.com/spring-boot-actuators
+[7] https://docs.spring.io/spring-boot/reference/actuator/index.html
+
+---
+Answer from Perplexity: https://www.perplexity.ai/search/hi-rpHBshnlQgexhvGtsTn0sQ?utm_source=copy_output

@@ -1,0 +1,44 @@
+In Spring Boot, a **component** is a class that is marked with the `@Component` annotation, indicating that it should be managed by the Spring IoC (Inversion of Control) container. Components are essential for enabling dependency injection and promoting modular design within the application.
+
+### Key Aspects of Spring Components
+
+- **Auto-Detection**: Classes annotated with `@Component` are automatically detected during classpath scanning when using annotation-based configuration. This allows Spring to instantiate and manage these classes as beans.
+
+- **Specialized Annotations**: In addition to `@Component`, Spring provides specialized annotations for specific types of components:
+  - **`@Service`**: Indicates that the class provides business logic or service functionality.
+  - **`@Repository`**: Used for data access components, typically interacting with a database.
+  - **`@Controller`**: Marks a class as a controller in web applications, handling incoming requests and returning responses.
+
+- **Lifecycle Management**: The Spring container manages the lifecycle of components, including their creation, initialization, and destruction.
+
+### Example of a Component
+
+Here’s a simple example of defining a component in a Spring Boot application:
+
+```java
+import org.springframework.stereotype.Component;
+
+@Component
+public class MyComponent {
+    public void performTask() {
+        System.out.println("Task performed by MyComponent.");
+    }
+}
+```
+
+### Summary
+
+Spring components are fundamental building blocks in Spring Boot applications. They enable dependency injection and are automatically managed by the IoC container, facilitating cleaner and more maintainable code.
+
+Citations:
+[1] https://www.digitalocean.com/community/tutorials/spring-component
+[2] https://www.digitalocean.com/community/tutorials/key-components-and-internals-of-spring-boot-framework
+[3] https://www.youtube.com/watch?v=xWHTzr7qadc
+[4] https://www.theserverside.com/video/How-Spring-Boot-Component-and-ComponentScan-annotations-work
+[5] https://www.baeldung.com/spring-component-annotation
+[6] https://hyperskill.org/learn/step/14652
+[7] https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/stereotype/Component.html
+
+---
+Answer from Perplexity: https://www.perplexity.ai/search/hi-rpHBshnlQgexhvGtsTn0sQ?utm_source=copy_output
+

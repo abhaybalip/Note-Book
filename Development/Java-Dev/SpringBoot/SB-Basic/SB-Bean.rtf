@@ -1,0 +1,49 @@
+In Spring Boot, a **bean** is an object that is instantiated, managed, and assembled by the Spring IoC (Inversion of Control) container. Beans are fundamental components of a Spring application, and they are created based on configuration metadata provided to the container.
+
+### Key Components of Spring Beans
+
+1. **Configuration Metadata**: This includes information required for the container to create a bean, manage its lifecycle, and resolve its dependencies. Configuration can be specified using XML, Java annotations (like `@Bean`), or Java configuration classes.
+
+2. **Bean Definition**: Each bean is defined by a `BeanDefinition` object, which contains:
+   - **Class Name**: The fully qualified class name of the bean.
+   - **Scope**: Defines the lifecycle of the bean (e.g., singleton, prototype).
+   - **Dependencies**: References to other beans that the current bean depends on.
+   - **Lifecycle Callbacks**: Methods that are called during the initialization and destruction phases of the bean lifecycle.
+
+3. **Dependency Injection**: Spring beans can have dependencies on other beans. The IoC container automatically resolves these dependencies and injects them when creating the bean.
+
+### Example of Bean Creation
+
+You can define a bean in a Spring Boot application using the `@Bean` annotation in a configuration class:
+
+```java
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class AppConfig {
+
+    @Bean
+    public MyService myService() {
+        return new MyService();
+    }
+}
+```
+
+### Summary
+
+Spring beans are essential for building modular applications in Spring Boot. They enable dependency injection and lifecycle management, allowing developers to create loosely coupled components that are easier to test and maintain.
+
+Citations:
+[1] https://www.tutorialspoint.com/spring/spring_bean_definition.htm
+[2] https://docs.spring.io/spring-framework/reference/core/beans/definition.html
+[3] https://data-flair.training/blogs/spring-bean/
+[4] https://www.codecademy.com/article/what-is-a-spring-bean
+[5] https://docs.spring.io/spring-javaconfig/docs/1.0.0.m3/reference/html/creating-bean-definitions.html
+[6] https://www.baeldung.com/spring-bean
+[7] https://spring.io/blog/2019/01/21/manual-bean-definitions-in-spring-boot/
+[8] https://stackoverflow.com/questions/17193365/what-in-the-world-are-spring-beans/17193458
+
+---
+Answer from Perplexity: https://www.perplexity.ai/search/hi-rpHBshnlQgexhvGtsTn0sQ?utm_source=copy_output
+
