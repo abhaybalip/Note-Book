@@ -48,3 +48,49 @@ Citations:
 
 ---
 Answer from Perplexity: https://www.perplexity.ai/search/hi-tq1e.735T0au4_FlsBgOVA?utm_source=copy_output
+
+
+### Key Annotations in Spring Data JPA
+
+Spring Data JPA provides a set of annotations that facilitate the mapping of Java objects to database tables, allowing for efficient data management. Below is a list of the most commonly used annotations along with their meanings:
+
+- **@Entity**: Marks a class as a JPA entity, indicating that it should be mapped to a database table.
+
+- **@Table**: Specifies the table name and other settings for the entity in the database.
+
+- **@Id**: Indicates the primary key field of the entity.
+
+- **@GeneratedValue**: Specifies the strategy for generating primary keys automatically.
+
+- **@Column**: Provides additional configuration for a field, such as the column name or constraints (e.g., length, nullable).
+
+- **@Transient**: Indicates that a field should not be persisted in the database.
+
+- **@Embedded**: Specifies that a field is an instance of an embeddable class, allowing for complex types within an entity.
+
+- **@EmbeddedId**: Used to define a composite primary key that is represented by an embeddable class.
+
+- **@Version**: Used for optimistic locking; it marks a field as a version number for managing concurrent updates.
+
+- **@OneToOne**: Defines a one-to-one relationship between two entities.
+
+- **@OneToMany**: Defines a one-to-many relationship between two entities.
+
+- **@ManyToOne**: Defines a many-to-one relationship between two entities.
+
+- **@ManyToMany**: Defines a many-to-many relationship between two entities.
+
+- **@JoinColumn**: Specifies the foreign key column for associations between entities.
+
+- **@OrderBy**: Specifies the ordering of elements in a collection when fetching data from the database.
+
+These annotations are essential for effectively using Spring Data JPA to manage data persistence and relationships within Java applications.
+
+Citations:
+[1] https://codingnomads.com/java-spring-jpa-annotations
+[2] https://www.javaguides.net/2018/11/all-jpa-annotations-mapping-annotations.html
+[3] https://dzone.com/articles/all-jpa-annotations-mapping-annotations
+[4] https://github.com/gindex/spring-boot-annotation-list
+[5] https://www.baeldung.com/spring-data-annotations
+[6] https://www.javatpoint.com/spring-boot-jpa
+[7] https://docs.spring.io/spring-data/jpa/reference/jpa/query-methods.html

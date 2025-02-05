@@ -1,0 +1,39 @@
+## CommandLineRunner in Spring Boot
+
+The `CommandLineRunner` is a functional interface in Spring Boot that allows developers to execute code after the application context is loaded. This is useful for performing tasks such as initializing data or running startup routines.
+
+### How CommandLineRunner Works
+
+1. **Implementation**: A class implements the `CommandLineRunner` interface and overrides its `run` method.
+2. **Execution Timing**: The `run` method is automatically invoked after the application context is fully initialized but before the application starts serving requests.
+3. **Arguments**: The `run` method can accept command-line arguments, which can be utilized for various initialization tasks[2][4][8].
+
+### Example Usage
+
+```java
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.stereotype.Component;
+
+@Component
+public class MyStartupRunner implements CommandLineRunner {
+    @Override
+    public void run(String... args) throws Exception {
+        // Initialization logic here
+        System.out.println("Application started with command-line arguments: " + Arrays.toString(args));
+    }
+}
+```
+
+In this example, when the Spring Boot application starts, it will execute the logic defined in the `run` method, allowing for custom initialization processes[4][6]. 
+
+Using `CommandLineRunner` enhances modularity and keeps startup logic separate from the main application logic, improving code organization and readability.
+
+Citations:
+[1] https://www.ibm.com/think/topics/java-spring-boot
+[2] https://mkyong.com/spring-boot/spring-boot-commandlinerunner-example/
+[3] https://azure.microsoft.com/en-us/resources/cloud-computing-dictionary/what-is-java-spring-boot
+[4] https://howtodoinjava.com/spring-boot/command-line-runner-interface-example/
+[5] https://spring.io/guides/gs/spring-boot/
+[6] https://stackoverflow.com/questions/69714828/what-is-the-exact-purpose-of-the-commandlinerunner-in-spring-boot
+[7] https://www.javatpoint.com/spring-boot-tutorial
+[8] https://www.danvega.dev/blog/spring-boot-command-line-runner
