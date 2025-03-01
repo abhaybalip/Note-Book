@@ -1,0 +1,57 @@
+Custom annotations in Spring Boot are developer-defined annotations that encapsulate specific behaviors or configurations, allowing for a clean and reusable way to apply logic across an application. Here's an overview of how they work and how to create them:
+
+### What Are Custom Annotations?
+- **Definition**: Custom annotations are declared using the `@interface` keyword and can be used to add metadata or logic to classes, methods, or fields.
+- **Purpose**: They simplify complex tasks, reduce boilerplate code, and enhance code readability by handling cross-cutting concerns like logging, validation, or security checks.
+
+### Steps to Create a Custom Annotation
+
+1. **Define the Annotation**:
+   - Use the `@interface` keyword to declare the annotation.
+   - Add meta-annotations like `@Target` and `@Retention` to specify where and how long the annotation is retained.
+   ```java
+   @Target(ElementType.METHOD)
+   @Retention(RetentionPolicy.RUNTIME)
+   public @interface CustomAnnotation {
+   }
+   ```
+
+2. **Create an Aspect (Optional)**:
+   - If you want to handle the annotation using Aspect-Oriented Programming (AOP), create an aspect class annotated with `@Aspect`.
+   - Use advice annotations (`@Around`, `@Before`, etc.) to define how the annotation should be processed.
+   ```java
+   @Aspect
+   @Component
+   public class CustomAspect {
+       @Around("@annotation(CustomAnnotation)")
+       public Object handleCustomAnnotation(ProceedingJoinPoint joinPoint) throws Throwable {
+           // Custom logic here
+           return joinPoint.proceed();
+       }
+   }
+   ```
+
+3. **Apply the Annotation**:
+   - Use the custom annotation on methods or classes where you want to apply the defined behavior.
+   ```java
+   @CustomAnnotation
+   public void exampleMethod() {
+       // Method implementation
+   }
+   ```
+
+### Benefits of Custom Annotations
+- **Simplify Configuration**: Reduce XML configurations by using annotations directly in code.
+- **Declarative Programming**: Declare behaviors without writing underlying logic.
+- **Cross-Cutting Concerns**: Handle concerns like logging or security centrally.
+- **Readability and Consistency**: Improve code readability and enforce consistency across the codebase.
+
+Citations:
+[1] https://dev.to/isaactony/how-to-create-your-own-custom-annotation-in-spring-boot-3ch5
+[2] https://www.scientecheasy.com/2021/09/custom-annotation-in-java.html/
+[3] https://hackernoon.com/how-to-create-custom-annotations-in-spring-boot
+[4] https://www.baeldung.com/java-custom-annotation
+[5] https://www.ignek.com/blog/custom-annotations-in-spring-boot/
+[6] https://www.linkedin.com/pulse/custom-annotations-spring-boot-rajeshwar-kalakuntla-u5hyc
+
+---
