@@ -1,0 +1,31 @@
+**Spring Boot Actuator Starter**
+
+The **Spring Boot Actuator Starter** is a module that provides production-ready features for monitoring and managing Spring Boot applications. It includes a set of built-in endpoints that allow you to inspect and manage your application's health, metrics, environment, and more.
+
+### Key Features:
+- **Health Checks**: Monitor the health of your application and its dependencies.
+- **Metrics**: Collect metrics such as memory usage, garbage collection, and web request details.
+- **Environment Information**: Access application environment properties.
+- **Application Information**: Retrieve build details like version and name.
+- **Dynamic Log Levels**: Change log levels without restarting the application.
+- **HTTP Tracing**: Trace HTTP requests.
+
+### Setup:
+1. **Dependency**: Add `spring-boot-starter-actuator` to your project's `pom.xml` (Maven) or `build.gradle` (Gradle).
+2. **Enable Endpoints**: Configure `application.yml` to expose desired endpoints.
+
+### Usage:
+- Access endpoints via HTTP or JMX.
+- Secure endpoints with Spring Security for authorized access.
+
+The Actuator enhances application observability and operational capabilities, making it essential for production environments[1][2][4].
+
+Citations:
+[1] https://dev.to/isaactony/a-beginners-guide-to-using-spring-boot-actuator-5g3n
+[2] https://github.com/spring-projects/spring-boot/blob/master/spring-boot-project/spring-boot-actuator/README.adoc
+[3] https://spring.io/guides/gs/actuator-service
+[4] https://docs.spring.io/spring-boot/reference/actuator/enabling.html
+[5] https://www.baeldung.com/spring-boot-actuators
+[6] https://docs.spring.io/spring-boot/reference/actuator/index.html
+
+---
