@@ -1,0 +1,56 @@
+**Types of Navigation in Flutter**
+================================
+
+Flutter supports several types of navigation, each serving different purposes and user experiences. Here are the main types:
+
+### 1. **Stack Navigation**
+   - **Definition**: Works like a deck of cards where screens are stacked on top of each other.
+   - **Usage**: Common for hierarchical and linear flows within an app.
+   - **Implementation**: Uses `Navigator.push()` to add new screens and `Navigator.pop()` to remove them[1][2].
+
+### 2. **Tab Navigation**
+   - **Definition**: Allows users to switch between multiple screens at the same level.
+   - **Usage**: Suitable for apps with multiple top-level destinations.
+   - **Implementation**: Typically uses `TabBar` or `BottomNavigationBar` widgets[1][2].
+
+### 3. **Drawer Navigation**
+   - **Definition**: Also known as the "hamburger menu," it provides access to app destinations from a side menu.
+   - **Usage**: Common for apps with multiple top-level destinations.
+   - **Implementation**: Uses `Drawer` widget[1][2].
+
+### 4. **Lateral Navigation**
+   - **Definition**: Movement between screens at the same level of hierarchy.
+   - **Usage**: Facilitated by navigation drawers or bottom navigation bars.
+   - **Implementation**: Similar to tab navigation but can involve more complex routing[4].
+
+### 5. **Forward Navigation**
+   - **Definition**: Navigation that moves deeper into an app's hierarchy.
+   - **Usage**: Common in lists where tapping an item leads to its details page.
+   - **Implementation**: Typically uses `Navigator.push()`[4].
+
+### 6. **Reverse Navigation**
+   - **Definition**: Moving backward through an app's hierarchy or screen history.
+   - **Usage**: Often handled by the OS back button or `Navigator.pop()`[4].
+
+### Routing Types
+
+- **Imperative Routing**: Manually push and pop routes using `Navigator`[3].
+- **Declarative Routing**: Define routes using `MaterialApp.routes` or routing packages like `go_router`[3][5].
+
+### Best Practices
+
+- Use stack navigation for hierarchical flows.
+- Implement tab or drawer navigation for multiple top-level destinations.
+- Choose between imperative and declarative routing based on app complexity.
+
+Citations:
+[1] https://www.freecodecamp.org/news/navigation-in-flutter/
+[2] https://www.gogosoon.com/blog/types-of-navigation-in-flutter
+[3] https://30dayscoding.com/blog/navigation-in-flutter-routing-and-deep-linking
+[4] https://reliasoftware.com/blog/navigation-in-flutter
+[5] https://docs.flutter.dev/ui/navigation
+[6] https://docs.flutter.dev/cookbook/navigation/navigation-basics
+[7] https://api.flutter.dev/flutter/widgets/Navigator-class.html
+
+---
+Answer from Perplexity: https://www.perplexity.ai/search/info-about-provider-state-mana-kGDVderKSSuX.6dHRFRVVA?utm_source=copy_output

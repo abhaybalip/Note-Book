@@ -1,0 +1,58 @@
+**Progress Widgets in Flutter**
+=============================
+
+Progress widgets in Flutter are used to visually indicate the progress of a task or operation. They are essential for providing feedback to users about ongoing processes. Here are some common types of progress widgets:
+
+### 1. **Linear Progress Indicators**
+   - **Definition**: Display progress along a line.
+   - **Types**:
+     - **Determinate**: Shows exact progress (e.g., 0% to 100%).
+     - **Indeterminate**: Animates without showing specific progress.
+   - **Widget**: `LinearProgressIndicator`.
+   - **Example**:
+     ```dart
+     LinearProgressIndicator(
+       value: 0.5, // Determinate progress
+       // value: null, // Indeterminate progress
+     )
+     ```
+
+### 2. **Circular Progress Indicators**
+   - **Definition**: Display progress along a circular arc.
+   - **Types**:
+     - **Determinate**: Shows exact progress.
+     - **Indeterminate**: Animates without showing specific progress.
+   - **Widget**: `CircularProgressIndicator`.
+   - **Example**:
+     ```dart
+     CircularProgressIndicator(
+       value: 0.5, // Determinate progress
+       // No value for indeterminate progress
+     )
+     ```
+
+### 3. **Custom Progress Indicators**
+   - **Packages**: 
+     - **percent_indicator**: Offers customizable circular and linear progress indicators.
+     - **flutter_advanced_progress**: Provides advanced customization options.
+     - **wave_progress_bars**: Displays wave-like animations.
+
+
+### Best Practices
+
+- Use determinate progress indicators when the progress is measurable.
+- Use indeterminate progress indicators for tasks with unknown durations.
+- Customize progress indicators to match your app's design theme.
+
+Citations:
+[1] https://fluttergems.dev/indicators-loading-refresh-progress/
+[2] https://topperworld.in/flutter-progress-bar/
+[3] https://api.flutter.dev/flutter/material/LinearProgressIndicator-class.html
+[4] https://pub.dev/packages/percent_indicator
+[5] https://m2.material.io/components/progress-indicators/flutter
+[6] https://docs.flutter.dev/ui/widgets
+[7] https://www.getwidget.dev/blog/top-flutter-progress-bar-widget-list/
+[8] https://docs.flutter.dev/reference/widgets
+
+---
+Answer from Perplexity: https://www.perplexity.ai/search/info-about-provider-state-mana-kGDVderKSSuX.6dHRFRVVA?utm_source=copy_output
