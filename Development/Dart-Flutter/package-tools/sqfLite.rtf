@@ -1,0 +1,79 @@
+Here's a comprehensive overview of using SQLite in Flutter:
+
+## Introduction to SQLite in Flutter
+
+SQLite is a popular choice for local data storage in Flutter applications due to its ease of use and robust features. The **sqflite** package is a Flutter plugin that provides a simple interface to interact with SQLite databases.
+
+### Key Features of SQLite in Flutter
+
+- **Local Storage:** SQLite allows you to store data locally on the device, making it suitable for offline applications.
+- **CRUD Operations:** You can perform Create, Read, Update, and Delete operations easily using the sqflite package.
+- **Performance:** SQLite databases provide faster inserts, updates, and queries compared to other local persistence solutions.
+
+### Steps to Use SQLite in Flutter
+
+1. **Add the sqflite Package:**
+   - Open your `pubspec.yaml` file and add the sqflite dependency:
+     ```yaml
+     dependencies:
+       sqflite: ^2.0.0+3
+     ```
+   - Run `flutter pub get` to install the package.
+
+2. **Import the sqflite Package:**
+   - In your Dart file, import the sqflite package:
+     ```dart
+     import 'package:sqflite/sqflite.dart';
+     ```
+
+3. **Open the Database:**
+   - Use the `openDatabase` method to open a connection to the database:
+     ```dart
+     final db = await openDatabase('my_database.db');
+     ```
+
+4. **Create a Table:**
+   - Create a table using the `execute` method:
+     ```dart
+     await db.execute(
+       'CREATE TABLE records(id INTEGER PRIMARY KEY, name TEXT)',
+     );
+     ```
+
+5. **Perform CRUD Operations:**
+   - **Insert Data:**
+     ```dart
+     Map row = {'name': 'Tony', 'age': 23};
+     await db.insert('records', row);
+     ```
+   - **Retrieve Data:**
+     ```dart
+     List> rows = await db.query('records');
+     ```
+   - **Update Data:**
+     ```dart
+     await db.update('records', row, where: 'id = ?', whereArgs: [1]);
+     ```
+   - **Delete Data:**
+     ```dart
+     await db.delete('records', where: 'id = ?', whereArgs: [1]);
+     ```
+
+### Tools and Resources
+
+- **sqflite Package:** Available on pub.dev.
+- **SQLite Browser:** A tool for creating and managing SQLite databases.
+- **FlutterFlow:** Supports SQLite integration for Flutter apps.
+
+By following these steps and using the sqflite package, you can efficiently manage local data storage in your Flutter applications.
+
+Citations:
+[1] https://www.dhiwise.com/en-in/post/a-walkthrough-with-flutter-databases-sqlite-and-local
+[2] https://30dayscoding.com/blog/working-with-sqlite-in-flutter-apps
+[3] https://docs.flutterflow.io/integrations/database/sqlite/
+[4] https://docs.flutter.dev/cookbook/persistence/sqlite
+[5] https://www.sqlservercentral.com/articles/using-sqlite-with-flutter
+[6] https://www.youtube.com/watch?v=pFctmsTDoa0
+
+---
+Answer from Perplexity: https://www.perplexity.ai/search/hi-.cyYifClRiuljTqNj7XyhQ?utm_source=copy_output
