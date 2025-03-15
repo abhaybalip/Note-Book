@@ -1,2 +1,2 @@
 # Note Book
- Repository for saving notes 
+ Repository for notes 
